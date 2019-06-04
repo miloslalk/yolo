@@ -1,0 +1,58 @@
+<!-- <mat-card class="card-height"> -->
+<!-- <mat-card-header>-->
+<!-- <mat-card-title class="mat-card-title">
+    title lekcije
+  </mat-card-title> -->
+<!-- </mat-card-header>  -->
+
+<!-- <img
+    mat-card-image
+    class="img-card"
+    src="../../assets/2019.03.21-12.22.27.png"
+  />
+
+  <mat-card-content>
+    <div class="card-text-content">
+      neki tekst lekcije koji ce da vuce iz baze
+    </div>
+  </mat-card-content>
+
+  <mat-card-actions fxLayout="row" fxLayoutAlign="end center">
+    <button mat-button>More</button>
+  </mat-card-actions>
+</mat-card> -->
+<!-- fxLayout.gt-xs="row" fxLayout.xs="column" za title -->
+
+<!-- <div
+  fxLayout="row"
+  fxLayout.xs="column"
+  fxLayoutWrap
+  fxLayoutGap="0.5%"
+  fxLayoutAlign="center"
+  class="card-hole"
+>
+  <mat-card class="card-picture" *ngFor="let picture of pictures">
+    <mat-card-title>
+      <span>{{ picture.title }}</span>
+
+      <mat-icon>navigate_next</mat-icon>
+    </mat-card-title>
+    <img mat-card-image [src]="picture.img" />
+  </mat-card>
+</div> -->
+
+<div style="display: flex" class="container">
+  <mat-card class="card-picture" *ngFor="let picture of pictures">
+    <mat-card-title>
+      <span>{{ picture.title }}</span>
+
+      <mat-icon mat-button style="margin-left: 15px" (click)="jelMoze()"
+        >navigate_next</mat-icon
+      >
+      <!-- <button mat-button style="margin-left: 15px" (click)="jelMoze()">
+        Click me!
+      </button> -->
+    </mat-card-title>
+    <img mat-card-image [src]="picture.img" />
+  </mat-card>
+</div>

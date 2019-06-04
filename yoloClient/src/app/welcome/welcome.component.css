@@ -1,0 +1,25 @@
+.img-part {
+  margin-left: 100px;
+  /* height: 100%; */
+
+  width: 100%;
+  border-radius: 5px;
+}
+.section-1 {
+  width: 30%;
+  /* height: 80%; */
+  height: 500px;
+}
+
+.section-2 {
+  width: 50%;
+  margin-left: 150px;
+  /* height: 80%; */
+  border: 1px solid black;
+}
+
+.ss {
+  display: flex;
+  height: 500px;
+  width: 100%;
+}
