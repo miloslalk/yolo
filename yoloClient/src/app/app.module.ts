@@ -10,8 +10,13 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MaterialModule } from './material.module';
 import { PostDialogComponent } from './post-dialog/post-dialog.component';
 import { DataService } from './services/data.service';
-import { WelcomeComponent } from './welcome/welcome.component';
+import {
+  DialogOverviewExampleDialog,
+  UserDashboardListComponent,
+} from './user-dashboard-list/user-dashboard-list.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { FacebookModule } from 'ngx-facebook';
 
 @NgModule({
   declarations: [
@@ -19,7 +24,9 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
     WelcomeComponent,
     DashboardComponent,
     PostDialogComponent,
-    UserDashboardComponent
+    UserDashboardComponent,
+    UserDashboardListComponent,
+    DialogOverviewExampleDialog
   ],
   imports: [
     BrowserModule,
@@ -27,9 +34,10 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
     MaterialModule,
     FlexLayoutModule,
     AppRouters,
-    FormsModule
+    FormsModule, 
+    FacebookModule.forRoot()
   ],
-  entryComponents: [PostDialogComponent],
+  entryComponents: [PostDialogComponent, DialogOverviewExampleDialog],
   providers: [DataService],
   bootstrap: [AppComponent]
 })

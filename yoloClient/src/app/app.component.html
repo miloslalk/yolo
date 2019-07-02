@@ -1,69 +1,47 @@
-<mat-sidenav-container>
-  <mat-sidenav #sidenav role="navigation">
-    <mat-nav-list>
-      <a mat-list-item>
-        <mat-icon class="icon">input</mat-icon>
-        <span class="label" style="margin-left: 5px;">Login</span>
-      </a>
-      <a mat-list-item routerLink="/">
-        <mat-icon class="icon">home</mat-icon>
-        <span class="label">Home</span>
-      </a>
-      <a mat-list-item routerLink="/dashboard">
-        <mat-icon class="icon">dashboard</mat-icon>
-        <span class="label">Dashboard</span>
-      </a>
-      <a mat-list-item type="button">
-        <mat-icon class="icon" style="margin-right: 10px;">input</mat-icon>
-        <span class="label">LogOut</span>
-      </a>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <div fxHide.gt-xs>
-        <button mat-icon-button (click)="sidenav.toggle()">
-          <mat-icon>menu</mat-icon>
-        </button>
-      </div>
-      <div>
-        <a routerLink="/">
-          Yolo Govno
+<!-- <mat-sidenav-container>
+  <mat-sidenav-content>-->
+<mat-toolbar class="test-test" color="#289dcc">
+  <!-- <div>
+        <a routerLink="/" style="margin-left: 60px">
+          Yolo Learning Platform
         </a>
       </div>
-      <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+      <div fxFlex fxLayout fxLayoutAlign="flex-end" style="margin-right: 60px">
         <ul fxLayout fxLayoutGap="20px" class="navigation-items">
-          <!-- <li>
-            <a>
-              <mat-icon class="icon" style="margin-right: 6px;">input</mat-icon>
-              <span class="label">Login</span>
-            </a>
-          </li> -->
           <li>
             <a routerLink="/">
-              <mat-icon class="icon" style="margin-right: 5px;">home</mat-icon>
               <span class="label">Home</span>
             </a>
           </li>
           <li>
-            <a routerLink="/dashboard">
-              <mat-icon class="icon" style="margin-right: 5px;"
-                >dashboard</mat-icon
-              >
+            <a routerLink="/user-dashboard">
               <span class="label">Courses</span>
             </a>
           </li>
-          <!-- <li>
-            <a>
-              <mat-icon class="icon" style="margin-right: 5px;">input</mat-icon>
-              <span class="label">LogOut</span>
-            </a>
-          </li> -->
         </ul>
-      </div>
-    </mat-toolbar>
-  </mat-sidenav-content>
-</mat-sidenav-container>
-<main>
+      </div> -->
+
+  <a routerLink="/" style="margin-left: 60px">
+    Yolo Learning Platform
+  </a>
+
+  <a routerLink="/" class="home">
+    <span class="label">Home</span>
+  </a>
+  <span class="example-spacer-margin"></span>
+  <a routerLink="/user-dashboard" class="course">
+    <span class="label">Courses</span>
+  </a>
+</mat-toolbar>
+<!-- </mat-sidenav-content>
+</mat-sidenav-container> -->
+
+<main class="container">
   <router-outlet></router-outlet>
 </main>
+
+<mat-toolbar class="test-test" color="#289dcc" style="margin-top: 70px">
+  <a routerLink="/" style="margin:0 auto">
+    Copyright © 2019 YOLO
+  </a>
+</mat-toolbar>
